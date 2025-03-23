@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        #status {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Web Output #2</h1>
+    <table id="tblInput">
+        <tr>
+            <td width="45%">
+                <label for="txtFname">First Name:</label>
+            </td>
+            <td>
+                <input type="text" id="txtFname">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="txtMname">Middle Name:</label>
+            </td>
+            <td>
+                <input type="text" id="txtMname">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="txtLname">Last Name:</label>
+            </td>
+            <td>
+                <input type="text" id="txtLname">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="txtAge">Age:</label>
+            </td>
+            <td>
+                <input type="number" id="txtAge">
+            </td>
+        </tr>
+
+        <tr style="height:20px;">
+            <td>
+                <!-- Empty cell for spacing -->
+            </td>
+            <td style="padding-top: 15px;">
+                <button id="btnInsertUpdate" value="insert">Insert</button>
+                <button id="btnClear">Clear Entry</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <fieldset>
+        <legend>Records</legend>
+        <p id="status" style="color:red; font-size: 12px;">No Records...</p>
+        <table id="tblRecords" style="border-collapse: collapse; margin: auto;">
+            <!-- Records will be dynamically inserted here -->
+        </table>
+    </fieldset>
+
+    <button id="btnClearItems" style="margin-top: 10px;">Clear Items</button>
+    <button id="btnGetTotal" style="margin-top: 10px;">Get Total</button>
+    <button id="btnIdentifyHighLow">Identify Highest and Lowest Number</button>
+    <label for="sortOrder">Sort By:</label>
+    <select id="sortOrder">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+
+    <script src="main.js"></script>
+</body>
+</html>
